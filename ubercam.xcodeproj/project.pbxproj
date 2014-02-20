@@ -19,6 +19,18 @@
 		02FD314818A96F4E0066D987 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD313018A96F4E0066D987 /* UIKit.framework */; };
 		02FD315018A96F4E0066D987 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 02FD314E18A96F4E0066D987 /* InfoPlist.strings */; };
 		02FD315218A96F4E0066D987 /* ubercamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FD315118A96F4E0066D987 /* ubercamTests.m */; };
+		02FD315C18A96F900066D987 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02FD315B18A96F900066D987 /* MainStoryboard.storyboard */; };
+		02FD315E18A9B3E00066D987 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD315D18A9B3E00066D987 /* Parse.framework */; };
+		02FD316818A9B45D0066D987 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD315F18A9B45C0066D987 /* AudioToolbox.framework */; };
+		02FD316918A9B45D0066D987 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316018A9B45C0066D987 /* CFNetwork.framework */; };
+		02FD316A18A9B45D0066D987 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316118A9B45C0066D987 /* CoreLocation.framework */; };
+		02FD316B18A9B45D0066D987 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316218A9B45C0066D987 /* libz.dylib */; };
+		02FD316C18A9B45D0066D987 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316318A9B45C0066D987 /* MobileCoreServices.framework */; };
+		02FD316D18A9B45D0066D987 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316418A9B45C0066D987 /* QuartzCore.framework */; };
+		02FD316E18A9B45D0066D987 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316518A9B45C0066D987 /* Security.framework */; };
+		02FD316F18A9B45D0066D987 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316618A9B45C0066D987 /* StoreKit.framework */; };
+		02FD317018A9B45D0066D987 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316718A9B45D0066D987 /* SystemConfiguration.framework */; };
+		02FD317318A9C4A70066D987 /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FD317218A9C4A70066D987 /* ParseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +60,19 @@
 		02FD314D18A96F4E0066D987 /* ubercamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ubercamTests-Info.plist"; sourceTree = "<group>"; };
 		02FD314F18A96F4E0066D987 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		02FD315118A96F4E0066D987 /* ubercamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ubercamTests.m; sourceTree = "<group>"; };
+		02FD315B18A96F900066D987 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		02FD315D18A9B3E00066D987 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		02FD315F18A9B45C0066D987 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		02FD316018A9B45C0066D987 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		02FD316118A9B45C0066D987 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		02FD316218A9B45C0066D987 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		02FD316318A9B45C0066D987 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		02FD316418A9B45C0066D987 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		02FD316518A9B45C0066D987 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		02FD316618A9B45C0066D987 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		02FD316718A9B45D0066D987 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		02FD317118A9C4A70066D987 /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
+		02FD317218A9C4A70066D987 /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +80,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FD316818A9B45D0066D987 /* AudioToolbox.framework in Frameworks */,
+				02FD316918A9B45D0066D987 /* CFNetwork.framework in Frameworks */,
+				02FD316A18A9B45D0066D987 /* CoreLocation.framework in Frameworks */,
+				02FD316B18A9B45D0066D987 /* libz.dylib in Frameworks */,
+				02FD316C18A9B45D0066D987 /* MobileCoreServices.framework in Frameworks */,
+				02FD316D18A9B45D0066D987 /* QuartzCore.framework in Frameworks */,
+				02FD316E18A9B45D0066D987 /* Security.framework in Frameworks */,
+				02FD316F18A9B45D0066D987 /* StoreKit.framework in Frameworks */,
+				02FD317018A9B45D0066D987 /* SystemConfiguration.framework in Frameworks */,
 				02FD312F18A96F4E0066D987 /* CoreGraphics.framework in Frameworks */,
 				02FD313118A96F4E0066D987 /* UIKit.framework in Frameworks */,
+				02FD315E18A9B3E00066D987 /* Parse.framework in Frameworks */,
 				02FD312D18A96F4E0066D987 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +131,16 @@
 		02FD312B18A96F4E0066D987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02FD315F18A9B45C0066D987 /* AudioToolbox.framework */,
+				02FD316018A9B45C0066D987 /* CFNetwork.framework */,
+				02FD316118A9B45C0066D987 /* CoreLocation.framework */,
+				02FD316218A9B45C0066D987 /* libz.dylib */,
+				02FD316318A9B45C0066D987 /* MobileCoreServices.framework */,
+				02FD316418A9B45C0066D987 /* QuartzCore.framework */,
+				02FD316518A9B45C0066D987 /* Security.framework */,
+				02FD316618A9B45C0066D987 /* StoreKit.framework */,
+				02FD316718A9B45D0066D987 /* SystemConfiguration.framework */,
+				02FD315D18A9B3E00066D987 /* Parse.framework */,
 				02FD312C18A96F4E0066D987 /* Foundation.framework */,
 				02FD312E18A96F4E0066D987 /* CoreGraphics.framework */,
 				02FD313018A96F4E0066D987 /* UIKit.framework */,
@@ -109,6 +154,9 @@
 			children = (
 				02FD313B18A96F4E0066D987 /* AppDelegate.h */,
 				02FD313C18A96F4E0066D987 /* AppDelegate.m */,
+				02FD317118A9C4A70066D987 /* ParseTableViewController.h */,
+				02FD317218A9C4A70066D987 /* ParseTableViewController.m */,
+				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
 				02FD313E18A96F4E0066D987 /* Images.xcassets */,
 				02FD313318A96F4E0066D987 /* Supporting Files */,
 			);
@@ -219,6 +267,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02FD315C18A96F900066D987 /* MainStoryboard.storyboard in Resources */,
 				02FD313718A96F4E0066D987 /* InfoPlist.strings in Resources */,
 				02FD313F18A96F4E0066D987 /* Images.xcassets in Resources */,
 			);
@@ -241,6 +290,7 @@
 			files = (
 				02FD313D18A96F4E0066D987 /* AppDelegate.m in Sources */,
 				02FD313918A96F4E0066D987 /* main.m in Sources */,
+				02FD317318A9C4A70066D987 /* ParseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +409,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/DrShoe/Documents/Udemy/ubercam,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
 				INFOPLIST_FILE = "ubercam/ubercam-Info.plist";
@@ -372,6 +426,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/DrShoe/Documents/Udemy/ubercam,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
 				INFOPLIST_FILE = "ubercam/ubercam-Info.plist";
@@ -441,6 +499,7 @@
 				02FD315718A96F4E0066D987 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02FD315818A96F4E0066D987 /* Build configuration list for PBXNativeTarget "ubercamTests" */ = {
 			isa = XCConfigurationList;
@@ -449,6 +508,7 @@
 				02FD315A18A96F4E0066D987 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
