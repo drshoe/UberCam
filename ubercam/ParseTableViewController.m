@@ -1,8 +1,8 @@
 //
-//  ParseViewController.m
+//  ParseTableViewController.m
 //  ubercam
 //
-//  Created by Daniel Sheng Xu on 2/10/2014.
+//  Created by Daniel Sheng Xu on 2/22/2014.
 //  Copyright (c) 2014 danielxu. All rights reserved.
 //
 
@@ -33,13 +33,16 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     PFQuery *query = [PFQuery queryWithClassName:@"TestObject"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
+            // Do something with the found objects
             self.objects = objects;
             [self.tableView reloadData];
         } else {
             // Log details of the failure
-            NSLog(@"error");
+            NSLog(@"Error");
+
         }
     }];
 }
@@ -54,7 +57,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-
     // Return the number of sections.
     return 1;
 }

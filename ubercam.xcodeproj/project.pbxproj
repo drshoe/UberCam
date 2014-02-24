@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767118B99E3100E92FFA /* ParseTableViewController.m */; };
+		0285767518B9A56100E92FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767418B9A56100E92FFA /* HomeViewController.m */; };
+		0285767818B9C28700E92FFA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767718B9C28700E92FFA /* LoginViewController.m */; };
+		0285767B18B9C29C00E92FFA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767A18B9C29C00E92FFA /* SignUpViewController.m */; };
+		0285768018BA5A4800E92FFA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285767F18BA5A4800E92FFA /* FacebookSDK.framework */; };
+		0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285EE5518BAE3C6000C7407 /* ParseLoginViewController.m */; };
 		02FD312D18A96F4E0066D987 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD312C18A96F4E0066D987 /* Foundation.framework */; };
 		02FD312F18A96F4E0066D987 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD312E18A96F4E0066D987 /* CoreGraphics.framework */; };
 		02FD313118A96F4E0066D987 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD313018A96F4E0066D987 /* UIKit.framework */; };
@@ -30,7 +36,6 @@
 		02FD316E18A9B45D0066D987 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316518A9B45C0066D987 /* Security.framework */; };
 		02FD316F18A9B45D0066D987 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316618A9B45C0066D987 /* StoreKit.framework */; };
 		02FD317018A9B45D0066D987 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316718A9B45D0066D987 /* SystemConfiguration.framework */; };
-		02FD317318A9C4A70066D987 /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02FD317218A9C4A70066D987 /* ParseTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0285767018B99E3100E92FFA /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
+		0285767118B99E3100E92FFA /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
+		0285767318B9A56100E92FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		0285767418B9A56100E92FFA /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		0285767618B9C28700E92FFA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0285767718B9C28700E92FFA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		0285767918B9C29C00E92FFA /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		0285767A18B9C29C00E92FFA /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		0285767F18BA5A4800E92FFA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		0285EE5418BAE3C6000C7407 /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
+		0285EE5518BAE3C6000C7407 /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
 		02FD312918A96F4E0066D987 /* ubercam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ubercam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02FD312C18A96F4E0066D987 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		02FD312E18A96F4E0066D987 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,8 +87,6 @@
 		02FD316518A9B45C0066D987 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		02FD316618A9B45C0066D987 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		02FD316718A9B45D0066D987 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		02FD317118A9C4A70066D987 /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
-		02FD317218A9C4A70066D987 /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +107,7 @@
 				02FD313118A96F4E0066D987 /* UIKit.framework in Frameworks */,
 				02FD315E18A9B3E00066D987 /* Parse.framework in Frameworks */,
 				02FD312D18A96F4E0066D987 /* Foundation.framework in Frameworks */,
+				0285768018BA5A4800E92FFA /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +146,7 @@
 		02FD312B18A96F4E0066D987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0285767F18BA5A4800E92FFA /* FacebookSDK.framework */,
 				02FD315F18A9B45C0066D987 /* AudioToolbox.framework */,
 				02FD316018A9B45C0066D987 /* CFNetwork.framework */,
 				02FD316118A9B45C0066D987 /* CoreLocation.framework */,
@@ -154,8 +170,16 @@
 			children = (
 				02FD313B18A96F4E0066D987 /* AppDelegate.h */,
 				02FD313C18A96F4E0066D987 /* AppDelegate.m */,
-				02FD317118A9C4A70066D987 /* ParseTableViewController.h */,
-				02FD317218A9C4A70066D987 /* ParseTableViewController.m */,
+				0285EE5418BAE3C6000C7407 /* ParseLoginViewController.h */,
+				0285EE5518BAE3C6000C7407 /* ParseLoginViewController.m */,
+				0285767018B99E3100E92FFA /* ParseTableViewController.h */,
+				0285767118B99E3100E92FFA /* ParseTableViewController.m */,
+				0285767618B9C28700E92FFA /* LoginViewController.h */,
+				0285767718B9C28700E92FFA /* LoginViewController.m */,
+				0285767918B9C29C00E92FFA /* SignUpViewController.h */,
+				0285767A18B9C29C00E92FFA /* SignUpViewController.m */,
+				0285767318B9A56100E92FFA /* HomeViewController.h */,
+				0285767418B9A56100E92FFA /* HomeViewController.m */,
 				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
 				02FD313E18A96F4E0066D987 /* Images.xcassets */,
 				02FD313318A96F4E0066D987 /* Supporting Files */,
@@ -290,7 +314,11 @@
 			files = (
 				02FD313D18A96F4E0066D987 /* AppDelegate.m in Sources */,
 				02FD313918A96F4E0066D987 /* main.m in Sources */,
-				02FD317318A9C4A70066D987 /* ParseTableViewController.m in Sources */,
+				0285767B18B9C29C00E92FFA /* SignUpViewController.m in Sources */,
+				0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */,
+				0285767518B9A56100E92FFA /* HomeViewController.m in Sources */,
+				0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */,
+				0285767818B9C28700E92FFA /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +440,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/DrShoe/Documents/Udemy/ubercam,
+					/Users/DrShoe/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
@@ -429,6 +458,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/DrShoe/Documents/Udemy/ubercam,
+					/Users/DrShoe/Documents/FacebookSDK,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
