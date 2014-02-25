@@ -60,8 +60,9 @@
 }
 
 // return objects in a different indexpath order. in this case we return object based on the section, not row, the default is row
+
 - (PFObject *)objectAtIndexPath:(NSIndexPath *)indexPath {
-    
+    return [self.objects objectAtIndex:indexPath.section];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -82,6 +83,7 @@
     
     profileImageView.file = profilePicture;
     [profileImageView loadInBackground];
+    return sectionHeaderView;
 }
 
 
@@ -91,20 +93,28 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    static NSString *CellIdentifier = @"PhotoCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PFImageView *photo = (PFImageView *)[cell viewWithTag:1];
+    photo.file = object[@"image"];
+    [photo loadInBackground];
+    return cell;
 }
 
+
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 50.0f;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    return 320.0f;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
 }
 
@@ -113,9 +123,14 @@
 {
     
 }
-
+*/
 - (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
+    [query includeKey:@"whoTook"];
+    
+    [query orderByDescending:@"createdAt"];
+    return query;
 }
 
 @end
