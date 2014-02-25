@@ -54,6 +54,11 @@
     [self presentViewController:self.imagePicker animated:NO completion:nil];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self clear];
+}
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.chosenImageView.image = chosenImage;
@@ -82,15 +87,12 @@
             if (!succeeded) {
                 [self showError];
             }
-            
-            [self clear];
-        
         }];
     }
     else {
         [self showError];
-        [self clear];
     }
+    [self clear];
     [self.tabBarController setSelectedIndex:0];
 }
 
