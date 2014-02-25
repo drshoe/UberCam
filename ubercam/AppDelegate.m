@@ -25,7 +25,9 @@
     supermarket[@"fruitItem2"] = @"orange";
     [supermarket saveInBackground];
     [self.window makeKeyAndVisible];
-    if (![PFUser currentUser]) {
+    
+    [PFFacebookUtils initializeFacebook];
+    if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self presentLoginControllerAnimated:NO];
     }
     return YES;
@@ -75,5 +77,111 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
+
+- (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error){
+        if (!error) {
+            // handle result
+            [self facebookRequestDidLoad:result];
+        }
+        else {
+            [self showErrorAndLogout];
+        }
+    }];
+}
+
+- (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error {
+    // show error and log out
+    [self showErrorAndLogout];
+}
+
+- (void)showErrorAndLogout {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Login failed" message:@"Please try again" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alertView show];
+    [PFUser logOut];
+}
+
+- (void)facebookRequestDidLoad:(id)result {
+    PFUser *user = [PFUser currentUser];
+    if (user) {
+        // update current user with facebook name and id
+        NSString *facebookName = result[@"name"];
+        user.username = facebookName;
+        NSString *facebookId = result[@"id"];
+        user[@"facebookId"]=facebookId;
+        
+        // download user profile picture from facebook
+        NSURL *profilePictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square",facebookId]];
+        NSURLRequest *profilePictureURLRequest = [NSURLRequest requestWithURL:profilePictureURL];
+        [NSURLConnection connectionWithRequest:profilePictureURLRequest delegate:self];
+    }
+}
+
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    [self showErrorAndLogout];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    _profilePictureData = [[NSMutableData alloc] init];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.profilePictureData appendData:data];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    if (self.profilePictureData.length == 0 || !self.profilePictureData) {
+        [self showErrorAndLogout];
+    }
+    else {
+        PFFile *profilePictureFile = [PFFile fileWithData:self.profilePictureData];
+        [profilePictureFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+            if (!succeeded) {
+                [self showErrorAndLogout];
+            }
+            else {
+                PFUser *user = [PFUser currentUser];
+                user[@"profilePicture"] = profilePictureFile;
+                [user saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+                    if (!succeeded) {
+                        [self showErrorAndLogout];
+                    }
+                    else {
+                        [self.window.rootViewController dismissViewControllerAnimated:YES completion:nil];
+                    }
+                }];
+            }
+        }];
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end

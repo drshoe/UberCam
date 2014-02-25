@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="-423" y="99"/>
         </scene>
-        <!--View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="0kl-s8-ayk">
             <objects>
-                <viewController id="E5o-C8-VuD" sceneMemberID="viewController">
+                <viewController id="E5o-C8-VuD" customClass="CameraViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vTA-89-qbg"/>
                         <viewControllerLayoutGuide type="bottom" id="TKe-Iw-MYS"/>
@@ -35,9 +35,41 @@
                     <view key="view" contentMode="scaleToFill" id="bu5-44-M8u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0ET-Np-4ZE">
+                                <rect key="frame" x="20" y="95" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lP-H7-Ecv">
+                                <rect key="frame" x="0.0" y="138" width="320" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpr-hI-6P9">
+                                <rect key="frame" x="137" y="466" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="share:" destination="E5o-C8-VuD" eventType="touchUpInside" id="Hla-bl-cmc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dWR-ag-N70"/>
+                    <navigationItem key="navigationItem" id="dWR-ag-N70">
+                        <barButtonItem key="rightBarButtonItem" title="Share" id="uzQ-EU-Nnn">
+                            <connections>
+                                <action selector="share:" destination="E5o-C8-VuD" id="AhI-bS-qTt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="chosenImageView" destination="8lP-H7-Ecv" id="Y7B-Zb-iwP"/>
+                        <outlet property="titleTextField" destination="0ET-Np-4ZE" id="C8U-4B-nzz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aj-4r-a7H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

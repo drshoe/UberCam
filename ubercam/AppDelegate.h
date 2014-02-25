@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "ParseLoginViewController.h"
-@interface AppDelegate : UIResponder <UIApplicationDelegate, PFLogInViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PFLogInViewControllerDelegate, NSURLConnectionDataDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) NSMutableData *profilePictureData;
 @end
