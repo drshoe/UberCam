@@ -7,7 +7,7 @@
 //
 
 #import <Parse/Parse.h>
-
-@interface HomeViewController : PFQueryTableViewController
+#import "FollowButton.h"
+@interface HomeViewController : PFQueryTableViewController <FollowButtonDelegate>
 
 @end
