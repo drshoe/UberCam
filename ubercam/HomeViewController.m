@@ -40,6 +40,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navbar_logo"]];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -94,6 +95,9 @@
     UITableViewCell *sectionHeaderView = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     PFImageView *profileImageView = (PFImageView *)[sectionHeaderView viewWithTag:1];
+    profileImageView.layer.cornerRadius = profileImageView.frame.size.width/2;
+    profileImageView.layer.masksToBounds = YES;
+    
     UILabel *userNameLabel = (UILabel *)[sectionHeaderView viewWithTag:2];
     UILabel *titleLabel = (UILabel *)[sectionHeaderView viewWithTag:3];
     
