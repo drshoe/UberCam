@@ -14,3 +14,5 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define BLUE_COLOR [UIColor colorWithRed:49/255.0 green:150/255.0 blue:214/255.0 alpha:1.0]
