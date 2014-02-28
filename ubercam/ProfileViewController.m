@@ -7,7 +7,7 @@
 //
 
 #import "ProfileViewController.h"
-
+#import "AppDelegate.h"
 @interface ProfileViewController ()
 @property (weak, nonatomic) IBOutlet PFImageView *profileImageView;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
@@ -69,8 +69,31 @@
     }];
 }
 
+- (PFQuery *)queryForTable {
+    if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        return nil;
+    }
+    PFQuery *followingQuery = [PFQuery queryWithClassName:@"Activity"];
+    [followingQuery whereKey:@"fromUser" equalTo:[PFUser currentUser]];
+    [followingQuery whereKey:@"type" equalTo:@"follow"];
+    
+    PFQuery *photosFromFollowedUsersQuery = [PFQuery queryWithClassName:@"Photo"];
+    [photosFromFollowedUsersQuery whereKey:@"whoTook" matchesKey:@"toUser" inQuery:followingQuery];
+    
+    PFQuery *photosFromCurrentUserQuery = [PFQuery queryWithClassName:@"Photo"];
+    [photosFromCurrentUserQuery whereKey:@"whoTook" equalTo:[PFUser currentUser]];
+    
+    PFQuery *superQuery = [PFQuery orQueryWithSubqueries:[NSArray arrayWithObjects:photosFromCurrentUserQuery,photosFromFollowedUsersQuery, nil]];
+    [superQuery includeKey:@"whoTook"];
+    [superQuery orderByDescending:@"createdAt"];
+    
+    return superQuery;
+}
 
 - (IBAction)logout:(id)sender {
+    [PFUser logOut];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+    [appDelegate presentLoginControllerAnimated:YES];
 }
 
 
