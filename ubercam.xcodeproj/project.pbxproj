@@ -11,7 +11,6 @@
 		0285767518B9A56100E92FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767418B9A56100E92FFA /* HomeViewController.m */; };
 		0285767818B9C28700E92FFA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767718B9C28700E92FFA /* LoginViewController.m */; };
 		0285767B18B9C29C00E92FFA /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767A18B9C29C00E92FFA /* SignUpViewController.m */; };
-		0285768018BA5A4800E92FFA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0285767F18BA5A4800E92FFA /* FacebookSDK.framework */; };
 		0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285EE5518BAE3C6000C7407 /* ParseLoginViewController.m */; };
 		0285EE5918BBE673000C7407 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285EE5818BBE673000C7407 /* CameraViewController.m */; };
 		02AAA05D18BE541800658800 /* FollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AAA05C18BE541800658800 /* FollowButton.m */; };
@@ -39,6 +38,8 @@
 		02FD316E18A9B45D0066D987 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316518A9B45C0066D987 /* Security.framework */; };
 		02FD316F18A9B45D0066D987 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316618A9B45C0066D987 /* StoreKit.framework */; };
 		02FD317018A9B45D0066D987 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02FD316718A9B45D0066D987 /* SystemConfiguration.framework */; };
+		B1C641A119F70436008F513E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1C641A019F70436008F513E /* FacebookSDK.framework */; };
+		B1C641A419F7054A008F513E /* SearchDisplayTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C641A319F7054A008F513E /* SearchDisplayTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +61,6 @@
 		0285767718B9C28700E92FFA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		0285767918B9C29C00E92FFA /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		0285767A18B9C29C00E92FFA /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		0285767F18BA5A4800E92FFA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../../FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		0285EE5418BAE3C6000C7407 /* ParseLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLoginViewController.h; sourceTree = "<group>"; };
 		0285EE5518BAE3C6000C7407 /* ParseLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLoginViewController.m; sourceTree = "<group>"; };
 		0285EE5718BBE673000C7407 /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
@@ -96,6 +96,9 @@
 		02FD316518A9B45C0066D987 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		02FD316618A9B45C0066D987 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		02FD316718A9B45D0066D987 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B1C641A019F70436008F513E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		B1C641A219F7054A008F513E /* SearchDisplayTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchDisplayTableViewController.h; sourceTree = "<group>"; };
+		B1C641A319F7054A008F513E /* SearchDisplayTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchDisplayTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,9 +117,9 @@
 				02FD317018A9B45D0066D987 /* SystemConfiguration.framework in Frameworks */,
 				02FD312F18A96F4E0066D987 /* CoreGraphics.framework in Frameworks */,
 				02FD313118A96F4E0066D987 /* UIKit.framework in Frameworks */,
+				B1C641A119F70436008F513E /* FacebookSDK.framework in Frameworks */,
 				02FD315E18A9B3E00066D987 /* Parse.framework in Frameworks */,
 				02FD312D18A96F4E0066D987 /* Foundation.framework in Frameworks */,
-				0285768018BA5A4800E92FFA /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +158,7 @@
 		02FD312B18A96F4E0066D987 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0285767F18BA5A4800E92FFA /* FacebookSDK.framework */,
+				B1C641A019F70436008F513E /* FacebookSDK.framework */,
 				02FD315F18A9B45C0066D987 /* AudioToolbox.framework */,
 				02FD316018A9B45C0066D987 /* CFNetwork.framework */,
 				02FD316118A9B45C0066D987 /* CoreLocation.framework */,
@@ -195,6 +198,8 @@
 				02AAA05C18BE541800658800 /* FollowButton.m */,
 				0285EE5718BBE673000C7407 /* CameraViewController.h */,
 				0285EE5818BBE673000C7407 /* CameraViewController.m */,
+				B1C641A219F7054A008F513E /* SearchDisplayTableViewController.h */,
+				B1C641A319F7054A008F513E /* SearchDisplayTableViewController.m */,
 				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
 				02FD313E18A96F4E0066D987 /* Images.xcassets */,
 				02FD313318A96F4E0066D987 /* Supporting Files */,
@@ -337,6 +342,7 @@
 				0285767518B9A56100E92FFA /* HomeViewController.m in Sources */,
 				0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */,
 				0285767818B9C28700E92FFA /* LoginViewController.m in Sources */,
+				B1C641A419F7054A008F513E /* SearchDisplayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +465,7 @@
 					"$(inherited)",
 					/Users/DrShoe/Documents/Udemy/ubercam,
 					/Users/DrShoe/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
@@ -477,6 +484,7 @@
 					"$(inherited)",
 					/Users/DrShoe/Documents/Udemy/ubercam,
 					/Users/DrShoe/Documents/FacebookSDK,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ubercam/ubercam-Prefix.pch";
