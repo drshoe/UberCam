@@ -222,6 +222,13 @@
         followActivity[@"fromUser"] = [PFUser currentUser];
         followActivity[@"toUser"] = user;
         followActivity[@"type"] = @"follow";
+        if (user[@"isPrivate"]) {
+            followActivity[@"isApproved"] = [NSNumber numberWithBool:NO];
+        }
+        else {
+            // the user is not private, so we don't need approval, set isApproved to YES
+            followActivity[@"isApproved"] = [NSNumber numberWithBool:YES];
+        }
         [followActivity saveEventually];
     }
 }
@@ -241,29 +248,4 @@
     
     }];
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @end

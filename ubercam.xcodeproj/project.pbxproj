@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02199E851A98316B00882B84 /* ApproveFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02199E841A98316B00882B84 /* ApproveFollowersViewController.m */; };
+		02199E881A9832E400882B84 /* AllowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02199E871A9832E400882B84 /* AllowButton.m */; };
 		0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767118B99E3100E92FFA /* ParseTableViewController.m */; };
 		0285767518B9A56100E92FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767418B9A56100E92FFA /* HomeViewController.m */; };
 		0285767818B9C28700E92FFA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767718B9C28700E92FFA /* LoginViewController.m */; };
@@ -53,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02199E831A98316B00882B84 /* ApproveFollowersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApproveFollowersViewController.h; sourceTree = "<group>"; };
+		02199E841A98316B00882B84 /* ApproveFollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApproveFollowersViewController.m; sourceTree = "<group>"; };
+		02199E861A9832E400882B84 /* AllowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllowButton.h; sourceTree = "<group>"; };
+		02199E871A9832E400882B84 /* AllowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllowButton.m; sourceTree = "<group>"; };
 		0285767018B99E3100E92FFA /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
 		0285767118B99E3100E92FFA /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
 		0285767318B9A56100E92FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -196,10 +202,14 @@
 				02FCE81018BFC9FB00444FB7 /* ProfileViewController.m */,
 				02AAA05B18BE541800658800 /* FollowButton.h */,
 				02AAA05C18BE541800658800 /* FollowButton.m */,
+				02199E861A9832E400882B84 /* AllowButton.h */,
+				02199E871A9832E400882B84 /* AllowButton.m */,
 				0285EE5718BBE673000C7407 /* CameraViewController.h */,
 				0285EE5818BBE673000C7407 /* CameraViewController.m */,
 				B1C641A219F7054A008F513E /* SearchDisplayTableViewController.h */,
 				B1C641A319F7054A008F513E /* SearchDisplayTableViewController.m */,
+				02199E831A98316B00882B84 /* ApproveFollowersViewController.h */,
+				02199E841A98316B00882B84 /* ApproveFollowersViewController.m */,
 				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
 				02FD313E18A96F4E0066D987 /* Images.xcassets */,
 				02FD313318A96F4E0066D987 /* Supporting Files */,
@@ -332,6 +342,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02199E881A9832E400882B84 /* AllowButton.m in Sources */,
+				02199E851A98316B00882B84 /* ApproveFollowersViewController.m in Sources */,
 				02FD313D18A96F4E0066D987 /* AppDelegate.m in Sources */,
 				0285EE5918BBE673000C7407 /* CameraViewController.m in Sources */,
 				02FD313918A96F4E0066D987 /* main.m in Sources */,

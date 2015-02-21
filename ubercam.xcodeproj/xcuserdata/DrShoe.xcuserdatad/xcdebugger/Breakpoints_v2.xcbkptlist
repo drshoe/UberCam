@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ubercam/HomeViewController.m"
-            timestampString = "436940525.537522"
+            filePath = "ubercam/ApproveFollowersViewController.m"
+            timestampString = "446184095.665261"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "188"
-            endingLineNumber = "188"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "-allowButton:didTapWithSectionIndex:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
