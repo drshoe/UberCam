@@ -13,6 +13,7 @@
 @property (nonatomic, strong) UIImagePickerController *imagePicker;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @property (weak, nonatomic) IBOutlet UIImageView *chosenImageView;
+@property (nonatomic, assign) BOOL imagePickerIsDisplayed;
 @end
 
 @implementation CameraViewController
@@ -55,7 +56,10 @@
         self.imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     self.imagePicker.mediaTypes = [NSArray arrayWithObjects:(NSString *)kUTTypeImage, nil];
-    [self presentViewController:self.imagePicker animated:NO completion:nil];
+    if (!self.imagePickerIsDisplayed) {
+        [self presentViewController:self.imagePicker animated:NO completion:nil];
+        self.imagePickerIsDisplayed = YES;
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -66,12 +70,13 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.chosenImageView.image = chosenImage;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     [self dismissViewControllerAnimated:NO completion:nil];
     [self.tabBarController setSelectedIndex:0];
+    self.imagePickerIsDisplayed = NO;
 }
 
 - (void)clear {

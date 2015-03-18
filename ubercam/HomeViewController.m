@@ -30,7 +30,7 @@
         // This table displays items in the Todo class
         self.parseClassName = @"Photo";
         self.pullToRefreshEnabled = YES;
-        self.paginationEnabled = NO;
+        self.paginationEnabled = YES;
         self.objectsPerPage = 3;
     }
     return self;
