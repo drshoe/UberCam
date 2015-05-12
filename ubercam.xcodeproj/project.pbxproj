@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		02199E851A98316B00882B84 /* ApproveFollowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02199E841A98316B00882B84 /* ApproveFollowersViewController.m */; };
 		02199E881A9832E400882B84 /* AllowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02199E871A9832E400882B84 /* AllowButton.m */; };
+		025984CF1B0240A7002D899B /* DetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 025984CE1B0240A7002D899B /* DetailButton.m */; };
+		025984D21B0243FD002D899B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 025984D11B0243FD002D899B /* DetailViewController.m */; };
 		0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767118B99E3100E92FFA /* ParseTableViewController.m */; };
 		0285767518B9A56100E92FFA /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767418B9A56100E92FFA /* HomeViewController.m */; };
 		0285767818B9C28700E92FFA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0285767718B9C28700E92FFA /* LoginViewController.m */; };
@@ -59,6 +61,10 @@
 		02199E841A98316B00882B84 /* ApproveFollowersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApproveFollowersViewController.m; sourceTree = "<group>"; };
 		02199E861A9832E400882B84 /* AllowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllowButton.h; sourceTree = "<group>"; };
 		02199E871A9832E400882B84 /* AllowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllowButton.m; sourceTree = "<group>"; };
+		025984CD1B0240A7002D899B /* DetailButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailButton.h; sourceTree = "<group>"; };
+		025984CE1B0240A7002D899B /* DetailButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailButton.m; sourceTree = "<group>"; };
+		025984D01B0243FD002D899B /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		025984D11B0243FD002D899B /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		0285767018B99E3100E92FFA /* ParseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseTableViewController.h; sourceTree = "<group>"; };
 		0285767118B99E3100E92FFA /* ParseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseTableViewController.m; sourceTree = "<group>"; };
 		0285767318B9A56100E92FFA /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
@@ -202,6 +208,8 @@
 				02FCE81018BFC9FB00444FB7 /* ProfileViewController.m */,
 				02AAA05B18BE541800658800 /* FollowButton.h */,
 				02AAA05C18BE541800658800 /* FollowButton.m */,
+				025984CD1B0240A7002D899B /* DetailButton.h */,
+				025984CE1B0240A7002D899B /* DetailButton.m */,
 				02199E861A9832E400882B84 /* AllowButton.h */,
 				02199E871A9832E400882B84 /* AllowButton.m */,
 				0285EE5718BBE673000C7407 /* CameraViewController.h */,
@@ -210,6 +218,8 @@
 				B1C641A319F7054A008F513E /* SearchDisplayTableViewController.m */,
 				02199E831A98316B00882B84 /* ApproveFollowersViewController.h */,
 				02199E841A98316B00882B84 /* ApproveFollowersViewController.m */,
+				025984D01B0243FD002D899B /* DetailViewController.h */,
+				025984D11B0243FD002D899B /* DetailViewController.m */,
 				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
 				02FD313E18A96F4E0066D987 /* Images.xcassets */,
 				02FD313318A96F4E0066D987 /* Supporting Files */,
@@ -347,6 +357,7 @@
 				02FD313D18A96F4E0066D987 /* AppDelegate.m in Sources */,
 				0285EE5918BBE673000C7407 /* CameraViewController.m in Sources */,
 				02FD313918A96F4E0066D987 /* main.m in Sources */,
+				025984D21B0243FD002D899B /* DetailViewController.m in Sources */,
 				0285767B18B9C29C00E92FFA /* SignUpViewController.m in Sources */,
 				02FCE81118BFC9FB00444FB7 /* ProfileViewController.m in Sources */,
 				0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */,
@@ -354,6 +365,7 @@
 				0285767518B9A56100E92FFA /* HomeViewController.m in Sources */,
 				0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */,
 				0285767818B9C28700E92FFA /* LoginViewController.m in Sources */,
+				025984CF1B0240A7002D899B /* DetailButton.m in Sources */,
 				B1C641A419F7054A008F513E /* SearchDisplayTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

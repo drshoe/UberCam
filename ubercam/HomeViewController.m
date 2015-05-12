@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "DetailViewController.h"
 
 @interface HomeViewController ()
 @property (nonatomic, strong) NSMutableArray *followingArray;
@@ -116,6 +117,10 @@
     FollowButton *followButton = (FollowButton *)[sectionHeaderView viewWithTag:4];
     followButton.delegate = self;
     followButton.sectionIndex = section;
+    
+    //detail button
+    DetailButton *detailButton = (DetailButton *)[sectionHeaderView viewWithTag:5];
+    detailButton.sectionIndex = section;
     
     if (!self.followingArray || [user.objectId isEqualToString:[PFUser currentUser].objectId]) {
         followButton.hidden = YES;
@@ -248,4 +253,15 @@
     
     }];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"DetailSegue"]) {
+        DetailViewController *vc = segue.destinationViewController;
+        vc.sectionIndex = [(DetailButton *)sender sectionIndex];
+    }
+}
+
 @end
