@@ -18,6 +18,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.sectionIndexLabel.text = [NSNumber numberWithInteger:self.sectionIndex].stringValue;
+    self.detailedTitleView.text = self.titleLabelText;
+    self.detailedImageView.file = self.imageFile;
+    [self.detailedImageView loadInBackground];
 }
 
 - (void)didReceiveMemoryWarning {

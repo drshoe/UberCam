@@ -200,11 +200,22 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFf-xo-3u4">
+                                <rect key="frame" x="27" y="281" width="133" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsN-UD-MoV" customClass="PFImageView">
+                                <rect key="frame" x="45" y="328" width="230" height="173"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Thf-Uo-O8P"/>
                     <connections>
+                        <outlet property="detailedImageView" destination="lsN-UD-MoV" id="3ya-Yn-XQa"/>
+                        <outlet property="detailedTitleView" destination="JFf-xo-3u4" id="8Md-VH-jKG"/>
                         <outlet property="sectionIndexLabel" destination="Y7A-fb-faA" id="KFT-LH-bdI"/>
                     </connections>
                 </viewController>

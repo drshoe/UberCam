@@ -260,7 +260,11 @@
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"DetailSegue"]) {
         DetailViewController *vc = segue.destinationViewController;
-        vc.sectionIndex = [(DetailButton *)sender sectionIndex];
+        NSInteger sectionIndex = [(DetailButton *)sender sectionIndex];
+        vc.sectionIndex = sectionIndex;
+        PFObject *photo = [self.objects objectAtIndex:sectionIndex];
+        vc.titleLabelText = photo[@"title"];
+        vc.imageFile = photo[@"image"];
     }
 }
 
