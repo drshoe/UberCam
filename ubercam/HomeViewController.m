@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "DetailViewController.h"
+#import "CommentsViewController.h"
 
 @interface HomeViewController ()
 @property (nonatomic, strong) NSMutableArray *followingArray;
@@ -177,7 +178,7 @@
     if (indexPath.section == self.objects.count) {
         return 50.0f;
     }
-    return 320.0f;
+    return 350.0f;
 }
 
 
@@ -265,6 +266,12 @@
         PFObject *photo = [self.objects objectAtIndex:sectionIndex];
         vc.titleLabelText = photo[@"title"];
         vc.imageFile = photo[@"image"];
+    }
+    else if ([segue.identifier isEqualToString:@"CommentSegue"]) {
+        CommentsViewController *vc = segue.destinationViewController;
+        NSInteger sectionIndex = [(DetailButton *)sender sectionIndex];
+        PFObject *photo = [self.objects objectAtIndex:sectionIndex];
+        vc.photo = photo;
     }
 }
 
