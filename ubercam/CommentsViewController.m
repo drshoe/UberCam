@@ -7,31 +7,17 @@
 //
 
 #import "CommentsViewController.h"
-
 #import "MessageTableViewCell.h"
 #import "CommentTextView.h"
-#import "Message.h"
-
-#import "LoremIpsum.h"
 #import "MBProgressHUD.h"
 
 static NSString *MessengerCellIdentifier = @"MessengerCell";
 static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 
 @interface CommentsViewController ()
-
-/*
-@property (nonatomic, strong) NSMutableArray *messages;
-
-@property (nonatomic, strong) NSArray *users;
-@property (nonatomic, strong) NSArray *channels;
-@property (nonatomic, strong) NSArray *emojis;
-*/
 @property (nonatomic, strong) NSArray *searchResult;
-
 @property (nonatomic, strong) NSArray *commentsArray;
 @property (nonatomic, strong) NSMutableArray *userNames;
-
 @end
 
 @implementation CommentsViewController
@@ -69,30 +55,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    ///////////////// set up test data
-    /*
-    NSMutableArray *array = [[NSMutableArray alloc] init];
-    
-    for (int i = 0; i < 100; i++) {
-        NSInteger words = (arc4random() % 40)+1;
-        
-        Message *message = [Message new];
-        message.username = [LoremIpsum name];
-        message.text = [LoremIpsum wordsWithNumber:words];
-        [array addObject:message];
-    }
-    
-    NSArray *reversed = [[array reverseObjectEnumerator] allObjects];
-    
-    
-    self.messages = [[NSMutableArray alloc] initWithArray:reversed];
-    
-    self.users = @[@"Allen", @"Anna", @"Alicia", @"Arnold", @"Armando", @"Antonio", @"Brad", @"Catalaya", @"Christoph", @"Emerson", @"Eric", @"Everyone", @"Steve"];
-    self.channels = @[@"General", @"Random", @"iOS", @"Bugs", @"Sports", @"Android", @"UI", @"SSB"];
-    self.emojis = @[@"m", @"man", @"machine", @"block-a", @"block-b", @"bowtie", @"boar", @"boat", @"book", @"bookmark", @"neckbeard", @"metal", @"fu", @"feelsgood"];
-    */
-    //////////////////
     
     // setup tableview behaviour
     self.bounces = YES;
@@ -163,23 +125,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     // This little trick validates any pending auto-correction or auto-spelling just after hitting the 'Send' button
     [self.textView refreshFirstResponder];
     
-    Message *message = [Message new];
-    message.username = [LoremIpsum name];
-    message.text = [self.textView.text copy];
-    
-    //NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    //UITableViewRowAnimation rowAnimation = self.inverted ? UITableViewRowAnimationBottom : UITableViewRowAnimationTop;
-    //UITableViewScrollPosition scrollPosition = self.inverted ? UITableViewScrollPositionBottom : UITableViewScrollPositionTop;
-    
-    /*
-    [self.tableView beginUpdates];
-    [self.messages insertObject:message atIndex:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:rowAnimation];
-    [self.tableView endUpdates];
-    */
-    //[self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:scrollPosition animated:YES];
-    
-    
     // Trim the comment text
     NSString *trimmedComment = [self.textView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
@@ -220,10 +165,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
             [self loadObjects]; //refresh table view
         }];
     }
-    // Fixes the cell from blinking (because of the transform, when using translucent cells)
-    // See https://github.com/slackhq/SlackTextViewController/issues/94#issuecomment-69929927
-    //[self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
     [super didPressRightButton:sender];
 }
     
@@ -238,21 +179,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (NSString *)keyForTextCaching
 {
     return [[NSBundle mainBundle] bundleIdentifier];
-}
-
-- (void)didCommitTextEditing:(id)sender
-{
-    // Notifies the view controller when tapped on the right "Send" button for commiting the edited text
-    /*
-    Message *message = [Message new];
-    message.username = [LoremIpsum name];
-    message.text = [self.textView.text copy];
-    
-    [self.messages removeObjectAtIndex:0];
-    [self.messages insertObject:message atIndex:0];
-    [self.tableView reloadData];
-    */
-    [super didCommitTextEditing:sender];
 }
 
 - (BOOL)canShowAutoCompletion
@@ -271,14 +197,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
             array = self.userNames;
         }
     }
-    /*
-    else if ([prefix isEqualToString:@"#"] && word.length > 0) {
-        array = [self.channels filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", word]];
-    }
-    else if ([prefix isEqualToString:@":"] && word.length > 1) {
-        array = [self.emojis filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self BEGINSWITH[c] %@", word]];
-    }*/
-    
     if (array.count > 0) {
         array = [array sortedArrayUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     }
@@ -325,13 +243,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
 - (MessageTableViewCell *)messageCellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     MessageTableViewCell *cell = (MessageTableViewCell *)[self.tableView dequeueReusableCellWithIdentifier:MessengerCellIdentifier];
-    
-    /*
-    if (!cell.textLabel.text) {
-        UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(editCellMessage:)];
-        [cell addGestureRecognizer:longPress];
-    }*/
-    
     PFObject *commentActivity = self.commentsArray[indexPath.row];
     PFUser *fromUser = commentActivity[@"fromUser"];
     cell.titleLabel.text = fromUser.username;
@@ -339,36 +250,6 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
     PFFile *profilePicture = fromUser[@"profilePicture"];
     cell.thumbnailView.file = profilePicture;
     [cell.thumbnailView loadInBackground];
-    
-    /*
-    if (message.attachment) {
-        cell.attachmentView.image = message.attachment;
-        cell.attachmentView.layer.shouldRasterize = YES;
-        cell.attachmentView.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    }*/
-    
-    //cell.indexPath = indexPath;
-    //cell.usedForMessage = YES;
-    
-    /*
-    if (cell.needsPlaceholder)
-    {
-        CGFloat scale = [UIScreen mainScreen].scale;
-        
-        if ([[UIScreen mainScreen] respondsToSelector:@selector(nativeScale)]) {
-            scale = [UIScreen mainScreen].nativeScale;
-        }
-        
-        CGSize imgSize = CGSizeMake(kAvatarSize*scale, kAvatarSize*scale);
-        
-        [LoremIpsum asyncPlaceholderImageWithSize:imgSize
-                                       completion:^(UIImage *image) {
-                                           UIImage *thumbnail = [UIImage imageWithCGImage:image.CGImage scale:scale orientation:UIImageOrientationUp];
-                                           cell.thumbnailView.image = thumbnail;
-                                           cell.thumbnailView.layer.shouldRasterize = YES;
-                                           cell.thumbnailView.layer.rasterizationScale = [UIScreen mainScreen].scale;
-                                       }];
-    }*/
     
     // Cells must inherit the table view's transform
     // This is very important, since the main table view may be inverted
@@ -426,11 +307,7 @@ static NSString *AutoCompletionCellIdentifier = @"AutoCompletionCell";
         CGFloat height = CGRectGetHeight(titleBounds);
         height += CGRectGetHeight(bodyBounds);
         height += 40.0;
-        /*
-        if (message.attachment) {
-            height += 80.0 + 10.0;
-        }*/
-        
+
         if (height < kMinimumHeight) {
             height = kMinimumHeight;
         }

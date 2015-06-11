@@ -28,10 +28,7 @@
 		02967D731B28BF8A0025D155 /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D691B28BF8A0025D155 /* UIScrollView+SLKAdditions.m */; };
 		02967D741B28BF8A0025D155 /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D6B1B28BF8A0025D155 /* UIView+SLKAdditions.m */; };
 		02967D771B28D7B10025D155 /* CommentTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D761B28D7B10025D155 /* CommentTextView.m */; };
-		02967D7E1B28DAF00025D155 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D791B28DAF00025D155 /* Message.m */; };
 		02967D7F1B28DAF00025D155 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D7B1B28DAF00025D155 /* MessageTableViewCell.m */; };
-		02967D801B28DAF00025D155 /* MessageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D7D1B28DAF00025D155 /* MessageTextView.m */; };
-		02967D831B28DB3F0025D155 /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D821B28DB3F0025D155 /* LoremIpsum.m */; };
 		02967D861B293BE30025D155 /* CommentButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D851B293BE30025D155 /* CommentButton.m */; };
 		02967D891B2940160025D155 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 02967D881B2940160025D155 /* MBProgressHUD.m */; };
 		02AAA05D18BE541800658800 /* FollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 02AAA05C18BE541800658800 /* FollowButton.m */; };
@@ -117,14 +114,8 @@
 		02967D6B1B28BF8A0025D155 /* UIView+SLKAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SLKAdditions.m"; sourceTree = "<group>"; };
 		02967D751B28D7B10025D155 /* CommentTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentTextView.h; sourceTree = "<group>"; };
 		02967D761B28D7B10025D155 /* CommentTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentTextView.m; sourceTree = "<group>"; };
-		02967D781B28DAEF0025D155 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
-		02967D791B28DAF00025D155 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		02967D7A1B28DAF00025D155 /* MessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
 		02967D7B1B28DAF00025D155 /* MessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
-		02967D7C1B28DAF00025D155 /* MessageTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTextView.h; sourceTree = "<group>"; };
-		02967D7D1B28DAF00025D155 /* MessageTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTextView.m; sourceTree = "<group>"; };
-		02967D811B28DB3F0025D155 /* LoremIpsum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoremIpsum.h; sourceTree = "<group>"; };
-		02967D821B28DB3F0025D155 /* LoremIpsum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoremIpsum.m; sourceTree = "<group>"; };
 		02967D841B293BE30025D155 /* CommentButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentButton.h; sourceTree = "<group>"; };
 		02967D851B293BE30025D155 /* CommentButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentButton.m; sourceTree = "<group>"; };
 		02967D871B2940160025D155 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -302,16 +293,10 @@
 				02967D4F1B287F0C0025D155 /* CommentsViewController.m */,
 				02967D751B28D7B10025D155 /* CommentTextView.h */,
 				02967D761B28D7B10025D155 /* CommentTextView.m */,
-				02967D781B28DAEF0025D155 /* Message.h */,
-				02967D791B28DAF00025D155 /* Message.m */,
 				02967D7A1B28DAF00025D155 /* MessageTableViewCell.h */,
 				02967D7B1B28DAF00025D155 /* MessageTableViewCell.m */,
-				02967D7C1B28DAF00025D155 /* MessageTextView.h */,
-				02967D7D1B28DAF00025D155 /* MessageTextView.m */,
 				02967D841B293BE30025D155 /* CommentButton.h */,
 				02967D851B293BE30025D155 /* CommentButton.m */,
-				02967D811B28DB3F0025D155 /* LoremIpsum.h */,
-				02967D821B28DB3F0025D155 /* LoremIpsum.m */,
 				02967D871B2940160025D155 /* MBProgressHUD.h */,
 				02967D881B2940160025D155 /* MBProgressHUD.m */,
 				02FD315B18A96F900066D987 /* MainStoryboard.storyboard */,
@@ -459,16 +444,13 @@
 				02967D7F1B28DAF00025D155 /* MessageTableViewCell.m in Sources */,
 				02967D501B287F0C0025D155 /* CommentsViewController.m in Sources */,
 				02967D861B293BE30025D155 /* CommentButton.m in Sources */,
-				02967D801B28DAF00025D155 /* MessageTextView.m in Sources */,
 				0285767218B99E3100E92FFA /* ParseTableViewController.m in Sources */,
 				02AAA05D18BE541800658800 /* FollowButton.m in Sources */,
 				02967D891B2940160025D155 /* MBProgressHUD.m in Sources */,
 				0285767518B9A56100E92FFA /* HomeViewController.m in Sources */,
 				0285EE5618BAE3C6000C7407 /* ParseLoginViewController.m in Sources */,
-				02967D831B28DB3F0025D155 /* LoremIpsum.m in Sources */,
 				0285767818B9C28700E92FFA /* LoginViewController.m in Sources */,
 				02967D6E1B28BF8A0025D155 /* SLKTextView+SLKAdditions.m in Sources */,
-				02967D7E1B28DAF00025D155 /* Message.m in Sources */,
 				02967D701B28BF8A0025D155 /* SLKTextViewController.m in Sources */,
 				025984CF1B0240A7002D899B /* DetailButton.m in Sources */,
 				02967D731B28BF8A0025D155 /* UIScrollView+SLKAdditions.m in Sources */,
