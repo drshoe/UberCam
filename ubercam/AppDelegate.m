@@ -37,7 +37,6 @@
     [supermarket saveInBackground];
     [self.window makeKeyAndVisible];
     
-    [PFFacebookUtils initializeFacebook];
     if (![PFUser currentUser] && ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
         [self presentLoginControllerAnimated:NO];
     }
@@ -50,7 +49,8 @@
     //[self.window.rootViewController presentViewController:loginNavigationController animated:animated completion:nil];
     ParseLoginViewController *loginViewController = [[ParseLoginViewController alloc] init];
     loginViewController.delegate = self;
-    [loginViewController setFields:PFLogInFieldsFacebook];
+    loginViewController.fields = PFLogInFieldsFacebook;
+    loginViewController.facebookPermissions = @[ @"user_about_me"];
     [self.window.rootViewController presentViewController:loginViewController animated:animated completion:nil];
 }
 
@@ -80,17 +80,20 @@
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
          annotation:(id)annotation {
-    return [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication
-                        withSession:[PFFacebookUtils session]];
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+    [FBSDKAppEvents activateApp];
 }
 
 - (void)logInViewController:(PFLogInViewController *)logInController didLogInUser:(PFUser *)user {
-    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error){
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
+        // handle response
         if (!error) {
             // handle result
             [self facebookRequestDidLoad:result];

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 @interface DetailViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel *sectionIndexLabel;
 @property (nonatomic, assign) NSInteger sectionIndex;

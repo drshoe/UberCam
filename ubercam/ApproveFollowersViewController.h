@@ -7,6 +7,8 @@
 //
 
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 #import "AllowButton.h"
 @interface ApproveFollowersViewController : PFQueryTableViewController <AllowButtonDelegate>
 

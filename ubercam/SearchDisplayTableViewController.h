@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 @interface SearchDisplayTableViewController : PFQueryTableViewController <UISearchControllerDelegate>
 
 @end

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 #define kAvatarSize 30.0
 #define kMinimumHeight 50.0
 
