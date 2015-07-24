@@ -154,6 +154,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
+    
     if (indexPath.section == self.objects.count) {
         UITableViewCell *cell = [self tableView:tableView cellForNextPageAtIndexPath:indexPath];
         return cell;
@@ -189,11 +190,18 @@
 }
 
 
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.section == self.objects.count && self.paginationEnabled) {
         [self loadNextPage];
     }
+}
+
+//http://stackoverflow.com/questions/24992261/pfquerytableviewcontroller-error
+// fix bug :Assertion failure in -[UITableView _endCellAnimationsWithContext:], /SourceCache/UIKit_Sim/UIKit-2935.137/UITableView.m:1114 2014-07-28 01:50:37.368 SampleCamApp[25686:60b] Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: 'attempt to delete row 3 from section 0 which only contains 1 rows before the update'
+- (NSIndexPath *)_indexPathForPaginationCell {
+    return [NSIndexPath indexPathForRow:0 inSection:[self.objects count]];
 }
 
 - (PFQuery *)queryForTable {
