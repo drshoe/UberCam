@@ -8,15 +8,24 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <ParseFacebookUtilsV4/PFFacebookUtils.h>
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
     [Parse setApplicationId:@"RnBJMkZZRYIi5F9RR3xincVjhc8mYaGr9nMksi5a"
                   clientKey:@"00A6wNGLZcD50t7rGShCiqxXW41yEFeSop3Qifpa"];
-    //[Parse setApplicationId:@"PSnnHwMJUVf6Eb7SWANLTzr9zrtXDA6Gfrw5izf9"
-      //            clientKey:@"ERTMEnoldJGyrCA6nHU8IUmzpD9zWR5KXIratHzo"];
+    
+    // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
     
     PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     testObject[@"foo"] = @"bar";
